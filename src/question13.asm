@@ -1,5 +1,5 @@
 ; class Grupo():
-;   aluno1 = Icaro Baliza Albuquerque 
+;   aluno1 = Icaro Baliza Albuquerque 222115784
 ;   aluno2 = João Paulo Gomes Bernardino 222115792
 ;   aluno3 = Yuri Freitas Hughes 220115570 
 
@@ -61,11 +61,11 @@ calculateRadius:
 	mov rax, 1
 	call scanf
 
-
-	; Calcula a área pi * r^2
+	
+   ; Calcula a área r² * pi
     movq xmm0, [pi]
     movq xmm1, [radius]
-	mulsd xmm0, xmm1
+    mulsd xmm0, xmm1
     mulsd xmm0, xmm1
     jmp showResult
 
@@ -84,6 +84,7 @@ calculateDiameter:
     mov rax, 1
     call scanf
 
+    ; Formula: (d/2)² * pi
     ; Divide o diâmetro por 2
     movq xmm0, [half]
     mulsd xmm0, [diameter]
